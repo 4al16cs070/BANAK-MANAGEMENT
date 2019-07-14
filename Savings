@@ -1,0 +1,36 @@
+package pac;
+
+public class Savings implements Account {
+	int accmoney;
+	String accName;
+	double balance;
+	Savings(int accmoney,String accName,double balance)
+	{
+		this.accmoney=accmoney;
+		this.accName=accName;
+		this.balance=balance;
+	}
+	@Override
+	public void withdraw(double amt) {
+		if(amt<=balance)
+		{
+			balance=balance-amt;
+		}
+		else
+			System.out.println("withdrawimg not done RS "+amt);
+		
+	}
+	@Override
+	public void deposit(double amt) {
+		balance=balance+amt;
+		System.out.println("deposit RS "+amt);
+	}
+	@Override
+	public void checkBal() {
+		System.out.println("Balance RS "+balance);
+		
+	}
+	
+	
+	
+}
