@@ -1,0 +1,19 @@
+package pac;
+
+public class AccountManager {
+	static Account createAccount(String name,int num,double bal,char type)
+	{
+		Account ref=null;
+		if(type=='s')
+		{
+			ref=new Savings(num,name,bal);
+			System.out.println("savings account has created");
+	}
+		else
+		{
+			ref=new Loan(num,name,bal);
+			System.out.println("loan account has created");
+		}
+		return ref;
+	}
+}
