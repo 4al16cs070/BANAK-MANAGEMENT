@@ -1,0 +1,26 @@
+package pac;
+import java.util.Scanner;
+public class Main123 {
+	public static void main(String[] args) {
+		
+		System.out.println("started");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter ur name");
+		String name;
+		name=sc.next();
+		System.out.println("enter type");
+		char ch=sc.next().charAt(0);
+		System.out.println("enter money to withdraw");
+		int wc;
+		wc=sc.nextInt();
+		System.out.println("enter money to deposit");
+		int ss;
+		ss=sc.nextInt();
+		Account ref=AccountManager.createAccount(name,111,900000,ch);
+		
+		ref.withdraw(wc);
+		ref.checkBal();
+		ref.deposit(ss);
+		ref.checkBal();
+	}
+}
